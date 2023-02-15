@@ -4,7 +4,7 @@ import AppContext from "../../../AppContext";
 import { Button } from "../../StyledComponents/Button";
 import Image from "next/image";
 import SectionHeading from "../../Common/SectionHeading";
-import plant1 from "../../../public/Assets/Images/plant1.png";
+import plant1 from "../../../public/Assets/Images/Plant1.png";
 
 const About = ({
   about_us_healdine,
