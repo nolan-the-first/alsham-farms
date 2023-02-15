@@ -16,7 +16,7 @@ const Products = ({ products, latest_product_headline }) => {
       style={{ backgroundImage: `url(${BgImage.src})` }}
     >
       <SectionHeading title={latest_product_headline} white={true} />
-      <div className="grid grid-cols-3 tab:grid-cols-2 mob:grid-cols-1 gap-8 w-full z-10">
+      <div className="grid grid-cols-3 tab:grid-cols-2 mob:grid-cols-1 gap-8 w-full z-10 mb-8">
         {products.map(({ name, images, slug }, i) => {
           return (
             <ProductCard
