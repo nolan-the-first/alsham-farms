@@ -4,6 +4,7 @@ import AppContext from "../../../AppContext";
 import { Button } from "../../StyledComponents/Button";
 import Image from "next/image";
 import SectionHeading from "../../Common/SectionHeading";
+import plant1 from "../../../public/Assets/Images/plant1.png";
 
 const About = ({
   about_us_healdine,
@@ -43,9 +44,11 @@ const About = ({
         </Button>
       </div>
       <Image
-        src={require("../../../public/Assets/Images/plant1.png")}
+        src={plant1.src}
         alt=""
-        className="absolute bottom-0 left-0 -z-10"
+        width={1000}
+        height={1000}
+        className="absolute bottom-0 left-0 -z-10 w-40 h-auto"
       />
     </Section>
   );
