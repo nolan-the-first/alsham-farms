@@ -12,9 +12,10 @@ module.exports = {
       black: "black",
       gray: "#221F1F",
       none: "transperant",
+      red: "#700111",
     },
     fontFamily: {
-      janna: ["var(FontVariable)", ...fontFamily.sans],
+      rsail: ["var(--font-rsail)", "var(--font-aRsail)"],
     },
 
     screens: {

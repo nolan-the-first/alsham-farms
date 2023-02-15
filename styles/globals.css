@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth !important;
+  font-family: "AD-Rsail";
 }
 
 *,
@@ -24,8 +25,89 @@ ul {
   margin: 0;
 }
 
+.swiper {
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.swiper-pagination {
+  bottom: -4rem !important;
+}
+.swiper-pagination-bullet {
+  margin: 0 0.5rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  transition-duration: 300ms;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1d1e1b !important;
+  scale: 1.5;
+}
+
+/* Centers */
+.certificatesSlider *,
+.newsSlider * {
+  transition-duration: 500ms !important;
+}
+.certificatesSlider .swiper-slide-active .news-image-overlay,
+.newsSlider .swiper-slide-active .news-image-overlay {
+  opacity: 0 !important;
+}
+
+.newsSlider .swiper-slide-active,
+.certificatesSlider .swiper-slide-active {
+  transform: scale(1.2) !important;
+  z-index: 2;
+  transition-delay: 300ms;
+}
+
+.newsSlider .swiper-slide-next .news-image-overlay,
+.certificatesSlider .swiper-slide-next .news-image-overlay {
+  opacity: 1 !important;
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 300%
+  ) !important;
+}
+.newsSlider .swiper-slide-prev .news-image-overlay,
+.certificatesSlider .swiper-slide-prev .news-image-overlay {
+  opacity: 1 !important;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 300%
+  ) !important;
+}
+
+.newsSlider
+  .swiper-slide:not(.swiper-slide-active.swiper-slide-next.swiper-slide-prev)
+  .news-image-overlay,
+.certificatesSlider
+  .swiper-slide:not(.swiper-slide-active.swiper-slide-next.swiper-slide-prev)
+  .news-image-overlay {
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, transparent 300%);
+}
+
+.certificatesSlider .swiper-slide {
+  transition-duration: 300ms !important;
+}
+
+.certificatesSlider .swiper-wrapper {
+  align-items: center;
+}
+
+.certificatesSlider .swiper-slide {
+  position: relative !important;
+}
+
 /* Google Map Styles */
-/* .map {
+.map {
   position: relative;
   padding-bottom: 40%;
   height: 0;
@@ -38,7 +120,7 @@ ul {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-} */
+}
 
 /* Active Bullets Styles */
 .swiper-pagination-bullet {
@@ -76,4 +158,38 @@ ul {
   html {
     font-size: 10.5px;
   }
+}
+
+/* jost-regular - latin */
+@font-face {
+  font-family: "AD-Rsail";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+  src: url("../public/Assets/Fonts/AD-Rsail/AD-Rsail-Regular.ttf");
+}
+/* jost-regular - latin */
+@font-face {
+  font-family: "AD-Rsail";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../public/Assets/Fonts/AD-Rsail/AD-Rsail-Bold.ttf");
+}
+
+/* jost-regular - latin */
+@font-face {
+  font-family: "AD-Rsail-AR";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/Assets/Fonts/AD-Rsail/ArbFONTS-AD-Rsail.otf");
+}
+/* jost-regular - latin */
+@font-face {
+  font-family: "AD-Rsail-AR";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../public/Assets/Fonts/AD-Rsail/ArbFONTS-AD-Rsail-Bold.otf");
 }
