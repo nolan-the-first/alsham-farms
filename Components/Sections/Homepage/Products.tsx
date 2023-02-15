@@ -29,7 +29,7 @@ const Products = ({ products, latest_product_headline }) => {
         })}
       </div>
       <Link
-        className="font-bold text-3xl text-white pb-1 border-b-4 border-white"
+        className="font-bold text-3xl text-white pb-1 border-b-4 border-white z-50"
         href={"/products"}
       >
         {isArabic ? "جميع المشاريع" : "See All Products"}
