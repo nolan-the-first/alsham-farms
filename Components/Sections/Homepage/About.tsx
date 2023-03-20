@@ -18,6 +18,7 @@ const About = ({
     <Section
       direction={screenWidth > 768 ? `row-reverse` : "column"}
       items="stretch"
+      id="about"
       className="overflow-hidden justify-center gap-32"
     >
       <div className="relative basis-1/2 w-full flex items-center  tab:aspect-[2/1.2]">

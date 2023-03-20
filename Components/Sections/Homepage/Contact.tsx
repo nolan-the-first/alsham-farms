@@ -11,6 +11,7 @@ import {
   faInstagram,
   faLinkedin,
   faLinkedinIn,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import Chili1 from "../../../public/Assets/Images/Chili1.png";
 import Link from "next/link";
@@ -26,13 +27,14 @@ const Contact = ({
     address,
     phone_number,
     email_address,
-    linkedin_link,
+    tiktok_link,
     facebook_link,
     instagram_link,
   } = useContext(AppContext);
   return (
     <Section
       className="bg-cover bg-center"
+      id="contact"
       style={{ backgroundImage: `url(${BgTexture.src})` }}
     >
       <SectionHeading title={contact_us_headline} white={true} />
@@ -80,10 +82,10 @@ const Contact = ({
             <p className="text-3xl mb-4">{contact_us_social_supporting_text}</p>
             <div className="flex items-center gap-6">
               <Link
-                href={`${linkedin_link}`}
+                href={`${tiktok_link}`}
                 className="w-10 aspect-square rounded-full flex items-center justify-center border-2 border-white border-opacity-25"
               >
-                {<FontAwesomeIcon icon={faLinkedinIn} />}
+                {<FontAwesomeIcon icon={faTiktok} />}
               </Link>
               <Link
                 href={`${facebook_link}`}

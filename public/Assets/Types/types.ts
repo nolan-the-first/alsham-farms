@@ -2,12 +2,13 @@ export interface GlobalProps {
   isArabic: boolean;
   screenWidth: number;
   facebook_link: string;
-  linkedin_link: string;
+  tiktok_link: string;
   instagram_link: string;
   address: string;
   email_address: string;
   phone_number: string;
   footer_license: string;
+  whatsapp_number: string;
 }
 
 export interface Product {
@@ -50,7 +51,7 @@ export interface HomepageData {
   about_us_image_1: any;
   about_us_image_2: any;
   our_menu_headline: any;
-  latest_product_headline: string;
+  latest_products_headline: string;
   latest_news_headline: string;
   testimonials_headline: string;
   contact_us_headline: string;

@@ -51,6 +51,10 @@ export default function Home({
         landing_headline={homepageData.landing_headline}
         image={homepageData.landing_image}
       />
+      <MenuSeciton
+        our_menu_headline={homepageData.our_menu_headline}
+        foodCategories={foodCategories}
+      />
       <About
         about_us_healdine={homepageData.about_us_headline}
         about_us_title={homepageData.about_us_title}
@@ -60,20 +64,16 @@ export default function Home({
       />
       <Products
         products={products}
-        latest_product_headline={homepageData.latest_product_headline}
+        latest_products_headline={homepageData.latest_products_headline}
       />
-      <MenuSeciton
-        our_menu_headline={homepageData.our_menu_headline}
-        foodCategories={foodCategories}
-      />
-      <NewsSection
+      {/* <NewsSection
         news={news}
         news_headline={homepageData.latest_news_headline}
       />
       <Testimonials
         testimonials={testimonials}
         testimonials_headline={homepageData.testimonials_headline}
-      />
+      /> */}
       <Contact
         contact_us_headline={homepageData.contact_us_headline}
         contact_us_app_supporting_text={

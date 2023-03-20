@@ -5,7 +5,7 @@ import LandingBg from "../../../public/Assets/Images/Homepage/LandingBg.png";
 import { Button } from "../../StyledComponents/Button";
 
 const Landing = ({ landing_headline, image }) => {
-  let { isArabic } = useContext(AppContext);
+  let { isArabic, whatsapp_number } = useContext(AppContext);
   // Swiper Function
   return (
     <div
@@ -20,7 +20,10 @@ const Landing = ({ landing_headline, image }) => {
       <h1 className="font-bold text-4xl text-white max-w-lg mob:mb-12 font-rsail">
         {landing_headline}
       </h1>
-      <Link href="/#contact" className="-translate-y-20 tab:translate-y-0">
+      <Link
+        href="https://wa.link/t76thp"
+        className="-translate-y-20 tab:translate-y-0"
+      >
         <Button className="shadow-md" bgColor="red" textColor="white">
           {isArabic ? "تواصل معنا" : "Get In Touch"}
         </Button>

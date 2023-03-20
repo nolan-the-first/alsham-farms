@@ -8,14 +8,14 @@ import Link from "next/link";
 import { useContext } from "react";
 import AppContext from "../../../AppContext";
 
-const Products = ({ products, latest_product_headline }) => {
+const Products = ({ products, latest_products_headline }) => {
   let { isArabic } = useContext(AppContext);
   return (
     <Section
       className="bg-cover bg-center w-screen overflow-hidden"
       style={{ backgroundImage: `url(${BgImage.src})` }}
     >
-      <SectionHeading title={latest_product_headline} white={true} />
+      <SectionHeading title={latest_products_headline} white={true} />
       <div className="grid grid-cols-3 tab:grid-cols-2 mob:grid-cols-1 gap-8 w-full z-10 mb-8">
         {products.map(({ name, images, slug }, i) => {
           return (

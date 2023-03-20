@@ -5,7 +5,7 @@ import { Section } from "../../StyledComponents/Section";
 
 const MenuSeciton = ({ our_menu_headline, foodCategories }) => {
   return (
-    <Section>
+    <Section id="menu">
       <SectionHeading title={our_menu_headline} />
       <div className="grid grid-cols-6 tab:gird-cols-3 mob:grid-cols-2 gap-10 w-full ">
         {foodCategories.map((category, i) => {
@@ -17,7 +17,7 @@ const MenuSeciton = ({ our_menu_headline, foodCategories }) => {
                   category: category.name,
                 },
               }}
-              className="w-full relative aspect-square flex items-center justify-center bg-white hover:bg-red duration-300 shadow-xl p-12 rounded-xl after:absolute after:w-6 after:top-2/3 after:left-1/3 after:aspect-square after:rounded-full after:bg-red after:opacity-40"
+              className="group flex-col w-full relative aspect-square flex items-center justify-center gap-4 bg-white hover:bg-red duration-300 shadow-xl p-12  rounded-xl"
               key={i}
             >
               <Image
@@ -27,6 +27,9 @@ const MenuSeciton = ({ our_menu_headline, foodCategories }) => {
                 height={1000}
                 className="h-full"
               />
+              <p className="text-3xl font-semibold group-hover:text-white duration-200">
+                {category.name}
+              </p>
             </Link>
           );
         })}

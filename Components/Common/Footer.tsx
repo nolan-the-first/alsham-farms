@@ -2,6 +2,7 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
@@ -23,7 +24,7 @@ const Footer = () => {
     phone_number,
     facebook_link,
     instagram_link,
-    linkedin_link,
+    tiktok_link,
   } = useContext(AppContext);
   return (
     <div
@@ -42,7 +43,7 @@ const Footer = () => {
               className="text-orange text-xl"
               icon={faMapMarker}
             />
-            {"Lorem Ipsum"}
+            {address}
           </p>
 
           <div className="flex items-center justify-between gap-16 mb-8">
@@ -68,8 +69,8 @@ const Footer = () => {
             <h3 className="text-gray-100 ">Social Media</h3>
             <ul className="flex items-center text-3xl text-orange gap-6">
               <li>
-                <Link target="_blank" href={linkedin_link}>
-                  <FontAwesomeIcon icon={faLinkedinIn} />
+                <Link target="_blank" href={tiktok_link}>
+                  <FontAwesomeIcon icon={faTiktok} />
                 </Link>
               </li>
               <li>
