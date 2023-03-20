@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
     email_address: "name@doamin.tld",
     footer_license: "Copyright © 2023 • Al-Sham Farms",
     screenWidth: 0,
+    whatsapp_number: "09123456789",
     isArabic: null,
   };
   let [globalInfo, setGlobalInfo] = useState<GlobalProps>(contextInitialValues);
