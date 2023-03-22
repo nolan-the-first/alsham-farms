@@ -21,6 +21,7 @@ const Footer = () => {
     isArabic,
     address,
     email_address,
+    footer_license,
     phone_number,
     facebook_link,
     instagram_link,
@@ -104,11 +105,7 @@ const Footer = () => {
             <Link href={"#why-us"}>{isArabic ? "لماذا نحن" : "WHY US"}</Link>
           </li>
         </ul>
-        <p className="sm:hidden">
-          {isArabic
-            ? "مزارع الشام 2023 جميع الحقوق محفوظة"
-            : "Copyright © 2023 • Alsham Farms"}
-        </p>
+        <p className="sm:hidden">{footer_license}</p>
       </div>
     </div>
   );

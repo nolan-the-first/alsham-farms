@@ -9,7 +9,9 @@ const contextInitialValues: GlobalProps = {
   email_address: "name@doamin.tld",
   footer_license: "Copyright © 2023 • Al-Sham Farms",
   tiktok_link: "https://www.tiktok.com/@alshamfarms.ae?_t=8ao4nNnAxGR&_r=1",
-  whatsapp_number: "+0123456789",
+  whatsapp_url: "+0123456789",
+  android_url: "",
+  apple_url: "",
   screenWidth: 0,
   isArabic: null,
 };

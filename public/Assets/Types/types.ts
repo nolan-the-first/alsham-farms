@@ -8,7 +8,9 @@ export interface GlobalProps {
   email_address: string;
   phone_number: string;
   footer_license: string;
-  whatsapp_number: string;
+  whatsapp_url: string;
+  android_url: string;
+  apple_url: string;
 }
 
 export interface Product {

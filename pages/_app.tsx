@@ -8,6 +8,7 @@ import Link from "next/link";
 import "../styles/globals.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import axios from "axios";
 // Font Import
 
 function MyApp({ Component, pageProps }) {
@@ -21,7 +22,9 @@ function MyApp({ Component, pageProps }) {
     email_address: "name@doamin.tld",
     footer_license: "Copyright © 2023 • Al-Sham Farms",
     screenWidth: 0,
-    whatsapp_number: "09123456789",
+    whatsapp_url: "09123456789",
+    android_url: "",
+    apple_url: "",
     isArabic: null,
   };
   let [globalInfo, setGlobalInfo] = useState<GlobalProps>(contextInitialValues);
@@ -29,19 +32,16 @@ function MyApp({ Component, pageProps }) {
   let isArabic = useRouter().locale == "ar";
   useEffect(() => {
     // Fetch
-    let fetchedGlobalProps: GlobalProps = {
-      facebook_link: "https://www.facebook.com/alshamfarms.ae?mibextid=ZbWKwL",
-      instagram_link: "instagram.com",
-      tiktok_link: "https://www.tiktok.com/@alshamfarms.ae?_t=8ao4nNnAxGR&_r=1",
-      address: "723 Jumeirah St - near Dubai London Hospital",
-      phone_number: "+043883800",
-      whatsapp_number: "+0558141666",
-      email_address: "Info@alshamfarms.ae",
-      footer_license: "Copyright © 2023 • Al-Sham Farms",
-      screenWidth: window.innerWidth,
-      isArabic: isArabic,
-    };
-    setGlobalInfo(fetchedGlobalProps);
+
+    axios
+      .get("https://alshambackend.teryaq.media/api/contact_data/")
+      .then((res) => {
+        setGlobalInfo({
+          ...res.data[0],
+          isArabic,
+          screenWidth: window.innerWidth,
+        });
+      });
   }, [isArabic]);
 
   return (
@@ -56,15 +56,13 @@ function MyApp({ Component, pageProps }) {
         {/* Whatsapp Icon */}
         <div className="fixed bottom-8 flex flex-col right-8 gap-6 items-center justify-center ">
           <Link
-            href={"https://wa.link/t76thp"}
+            href={globalInfo.whatsapp_url}
             className="w-20 flex items-center justify-center bg-red aspect-square rounded-full border-white border-4 text-5xl text-white"
           >
             <FontAwesomeIcon icon={faWhatsapp} />
           </Link>
           <Link
-            href={
-              "https://play.google.com/store/apps/details?id=com.makane.alshamfarms&hl=en&gl=US"
-            }
+            href={globalInfo.android_url}
             className="w-20 flex items-center justify-center bg-red aspect-square rounded-full border-white border-4 text-4xl text-white"
           >
             <FontAwesomeIcon icon={faGooglePlay} />

@@ -24,12 +24,11 @@ const Contact = ({
 }) => {
   let {
     isArabic,
-    address,
-    phone_number,
-    email_address,
     tiktok_link,
     facebook_link,
     instagram_link,
+    apple_url,
+    android_url,
   } = useContext(AppContext);
   return (
     <Section
@@ -71,10 +70,10 @@ const Contact = ({
             {contact_us_app_supporting_text}
           </p>
           <div className="flex items-center gap-8 text-7xl tab:mb-10">
-            <Link href={"/"}>
+            <Link href={android_url}>
               <FontAwesomeIcon icon={faGooglePlay} />
             </Link>
-            <Link href={"/"}>
+            <Link href={android_url}>
               <FontAwesomeIcon icon={faAppStore} />
             </Link>
           </div>

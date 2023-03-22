@@ -5,6 +5,7 @@ import { Button } from "../../StyledComponents/Button";
 import Image from "next/image";
 import SectionHeading from "../../Common/SectionHeading";
 import plant1 from "../../../public/Assets/Images/Plant1.png";
+import Link from "next/link";
 
 const About = ({
   about_us_healdine,
@@ -21,7 +22,7 @@ const About = ({
       id="about"
       className="overflow-hidden justify-center gap-32"
     >
-      <div className="relative basis-1/2 w-full flex items-center  tab:aspect-[2/1.2]">
+      <div className="relative basis-1/2 w-1/2 flex items-center  tab:aspect-[2/1.2]">
         <div
           className="relative bg-cover aspect-[1/1.3] bg-center bg-orange w-full basis-1/2 z-10 scale-125 max-w-xs"
           style={{ backgroundImage: `url(${about_us_image_1})` }}
@@ -40,9 +41,11 @@ const About = ({
           className="relative text-start text-lg mb-16"
           dangerouslySetInnerHTML={{ __html: about_us_text }}
         />
-        <Button bgColor="red" textColor="white">
-          {isArabic ? "القائمة" : "Our Menu"}
-        </Button>
+        <Link href={"/#menu"}>
+          <Button bgColor="red" textColor="white">
+            {isArabic ? "القائمة" : "Our Menu"}
+          </Button>
+        </Link>
       </div>
       <Image
         src={plant1.src}
